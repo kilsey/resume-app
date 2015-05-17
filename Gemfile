@@ -43,5 +43,12 @@ group :development, :test do
   gem 'spring'
 end
 
-gem 'pry-rails'
+group :development do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'koala'

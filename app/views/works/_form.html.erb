@@ -1,0 +1,33 @@
+<% if @work.errors.any? %>
+  <% @work.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<%= form_for @work do |f| %>
+  <div class="input-group input-group-lg">
+    <%= f.label :company, class: 'input-group-addon' %>
+    <%= f.text_field :company, class: 'form-control' %>
+  </div>
+  <div class="input-group input-group-lg">
+    <%= f.label :position, class: 'input-group-addon' %>
+    <%= f.text_field :position, class: 'form-control' %>
+  </div>
+  <div class="input-group input-group-lg">
+    <%= f.label :website, class: 'input-group-addon' %>
+    <%= f.text_field :website, class: 'form-control' %>
+  </div>
+  <div class="input-group input-group-lg">
+    <%= f.label :startDate, class: 'input-group-addon' %>
+    <%= f.text_field :startDate, class: 'form-control' %>
+  </div>
+  <div class="input-group input-group-lg">
+    <%= f.label :endDate, class: 'input-group-addon' %>
+    <%= f.text_field :endDate, class: 'form-control' %>
+  </div>
+  <div class="input-group input-group-lg">
+    <%= f.label :summary, class: 'input-group-addon' %>
+    <%= f.text_field :summary, class: 'form-control' %>
+  </div>
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
