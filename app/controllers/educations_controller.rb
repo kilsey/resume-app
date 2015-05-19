@@ -23,11 +23,11 @@ class EducationsController < ApplicationController
   end
 
   def edit
-    @education = Education.find_by(params[:id])
+    @education = Education.find(params[:id])
   end
 
   def update
-    @education = Education.find_by(params[:id])
+    @education = Education.find(params[:id])
 
     if @education.update(education_params)
       redirect_to @education

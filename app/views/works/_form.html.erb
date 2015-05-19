@@ -29,5 +29,6 @@
     <%= f.label :summary, class: 'input-group-addon' %>
     <%= f.text_field :summary, class: 'form-control' %>
   </div>
+  <%= f.input :user_id, :as=> :hidden, :input_html => { :value => current_user.id } %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>

@@ -23,11 +23,11 @@ class WorksController < ApplicationController
   end
 
   def edit
-    @work = Work.find_by(params[:id])
+    @work = Work.find(params[:id])
   end
 
   def update
-    @work = Work.find_by(params[:id])
+    @work = Work.find(params[:id])
 
     if @work.update(work_params)
       redirect_to @work

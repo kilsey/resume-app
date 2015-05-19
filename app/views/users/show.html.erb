@@ -1,6 +1,14 @@
-<h2 class='text-center'>Show User</h2>
+<h2 class='text-center'><%= @user.name %></h2>
 
 <div class="row">
 
+<%= @user.name %><br />
+<%= @user.label %><br />
+<%= @user.email %><br />
+<%= @user.phone %><br />
+<%= @user.website %><br />
+<%= @user.summary %>
+<br /><br />
+<a href="/users/<%= @user.id %>/edit">Edit</a>
 
 </div>
