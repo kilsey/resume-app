@@ -9,7 +9,13 @@
 <%= @work.endDate %><br />
 <%= @work.summary %><br />
 
-<br /><br />
-<a href="/works/<%= @work.id %>/edit">Edit</a>
+<ul>
+<% @work.highlights.each do |highlight| %>
+<li><%= highlight.detail %></li>
+<% end %>
+</ul>
 
+<br /><br />
+<p><a href="/works/<%= @work.id %>/edit">Edit</a></p>
+<p><a href="/highlights/new">Add Highlight</a></p>
 </div>

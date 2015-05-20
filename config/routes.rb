@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   resources :works
+  resources :highlights
   resources :educations
+  resources :skills
+  resources :keywords
 
   devise_for :users
 
