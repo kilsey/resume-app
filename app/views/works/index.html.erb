@@ -1,0 +1,23 @@
+<h2 class='text-center'><%= current_user.name %> Work Experience</h2>
+
+<div class="row">
+
+
+
+<% @works.each do |work| %>
+<div class="row">
+  <%= work.company %><br />
+  <%= work.position %><br />
+  <%= work.website %><br />
+  <%= work.startDate %><br />
+  <%= work.endDate %><br />
+  <%= work.summary %><br />
+  <br />
+  <a href="/works/<%= work.id %>/edit">Edit</a>
+</div>
+<% end %>
+
+
+
+
+</div>
