@@ -1,21 +1,20 @@
-<h2 class='text-center'>Show Work Experience</h2>
+<h2>Work Experience</h2>
 
 <div class="row">
 
-<%= @work.company %><br />
-<%= @work.position %><br />
-<%= @work.website %><br />
-<%= @work.startDate %><br />
-<%= @work.endDate %><br />
-<%= @work.summary %><br />
-
+<h3><%= @work.company %> <small><%= @work.website %></small></h3>
+<h4><%= @work.position %></h4>
+<p><%= @work.startDate %> - <%= @work.endDate %></p>
+<p><%= @work.summary %></p>
+<h5>Work Highlights <small><button type="button" class="btn btn-default btn-xs"><a href="/works/<%= @work.id %>/highlights/new">Add Highlight</a></button></small></h5>
 <ul>
 <% @work.highlights.each do |highlight| %>
-<li><%= highlight.detail %></li>
+<li><%= highlight.detail %> <button type="button" class="btn btn-default btn-xs"><a href="/works/<%= @work.id %>/highlights/<%= highlight.id %>/edit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></button></li>
 <% end %>
 </ul>
 
-<br /><br />
-<p><a href="/works/<%= @work.id %>/edit">Edit</a></p>
-<p><a href="/highlights/new">Add Highlight</a></p>
+<button type="button" class="btn btn-default btn-xs">
+  <a href="/works/<%= @work.id %>/edit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit Work</a>
+</button>
+
 </div>

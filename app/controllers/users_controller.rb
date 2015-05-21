@@ -3,7 +3,8 @@ class UsersController < ApplicationController
   # before_action :authenticate_user!, only: [:edit, :show, :update]
 
   def index
-    @users = User.all
+    id = params[:id].nil? ? current_user.id : params[:id]
+    @user = User.find(id)
   end
 
   def show

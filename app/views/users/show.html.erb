@@ -1,14 +1,14 @@
-<h2 class='text-center'><%= @user.name %></h2>
+<h2>User Details</h2>
 
 <div class="row">
 
-<%= @user.name %><br />
-<%= @user.label %><br />
-<%= @user.email %><br />
-<%= @user.phone %><br />
-<%= @user.website %><br />
-<%= @user.summary %>
-<br /><br />
-<a href="/users/<%= @user.id %>/edit">Edit</a>
+<h3><%= @user.name %></h3>
+<h4><%= @user.label %></h4>
+<%= @user.email %> | <%= @user.phone %> | <%= @user.website %><br />
+<p><%= @user.summary %></p>
+
+<button type="button" class="btn btn-default btn-xs">
+  <a href="/users/<%= @user.id %>/edit"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Edit User</a>
+</button>
 
 </div>

@@ -4,8 +4,8 @@
   <% end %>
 <% end %>
 <%= form_for @skill do |f| %>
-  <div class="input-group input-group-lg">
-    <%= f.label :detail, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :detail %>
     <%= f.text_field :detail, class: 'form-control' %>
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id  %>

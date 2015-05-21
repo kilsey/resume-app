@@ -5,30 +5,32 @@
 <% end %>
 
 <%= form_for @work do |f| %>
-  <div class="input-group input-group-lg">
-    <%= f.label :company, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :company %>
     <%= f.text_field :company, class: 'form-control' %>
   </div>
-  <div class="input-group input-group-lg">
-    <%= f.label :position, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :positio %>
     <%= f.text_field :position, class: 'form-control' %>
   </div>
-  <div class="input-group input-group-lg">
-    <%= f.label :website, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :website %>
     <%= f.text_field :website, class: 'form-control' %>
   </div>
-  <div class="input-group input-group-lg">
-    <%= f.label :startDate, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :startDate %>
     <%= f.text_field :startDate, class: 'form-control' %>
   </div>
-  <div class="input-group input-group-lg">
-    <%= f.label :endDate, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :endDate %>
     <%= f.text_field :endDate, class: 'form-control' %>
   </div>
-  <div class="input-group input-group-lg">
-    <%= f.label :summary, class: 'input-group-addon' %>
+  <div class="form-group">
+    <%= f.label :summary %>
     <%= f.text_field :summary, class: 'form-control' %>
   </div>
   <%= f.hidden_field :user_id, :value => current_user.id  %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
+
+<a 

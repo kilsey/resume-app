@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
 
-  resources :works
-  resources :highlights
+  resources :works do
+    resources :highlights
+  end
+  
   resources :educations
-  resources :skills
-  resources :keywords
+  
+  resources :skills do
+    resources :keywords
+  end
 
   devise_for :users
 

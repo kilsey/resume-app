@@ -3,11 +3,14 @@
     <%= message %>
   <% end %>
 <% end %>
-<%= form_for @highlight do |f| %>
-  <div class="input-group input-group-lg">
-    <%= f.label :detail, class: 'input-group-addon' %>
+
+
+
+<%= form_for [@work, @highlight] do |f| %>
+  <div class="form-group">
+    <%= f.label :detail %>
     <%= f.text_field :detail, class: 'form-control' %>
   </div>
-  <%= f.hidden_field :work_id, :value => @work.id  %> -->
+  <%= f.hidden_field :work_id, :value => @work.id  %>
   <%= f.submit class: 'btn btn-primary' %>
 <% end %>
